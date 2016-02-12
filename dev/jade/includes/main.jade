@@ -1,7 +1,61 @@
-main.main
-   
-   section.wrapper.main__section
-      
-      h1.super-header.fade-in-up Milky Boilerplate
-      
-      p.main__strapline.fade-in-up Thanks for downloading
+main.app
+
+    section.app__player
+
+        div.player__cover 
+
+            img(src="/assets/img/campfire.svg", alt="")
+
+        div.player__tracks
+        
+        
+            div(data-value="rain").track.track-rain 
+                span Rain
+                button(type="button")
+                    //- img(src="/assets/img/rain.svg", alt="rain icon")
+            
+            div(data-value="night").track.track-night 
+                span Night 
+                button(type="button")
+                    //- img(src="/assets/img/moon.svg", alt="moon icon")
+            
+            div(data-value="creek").track.track-creek 
+                span Creek
+                button(type="button")
+                    //- img(src="/assets/img/creek.svg", alt="creek icon")
+                    
+            div(data-value="fire").track.track-fire 
+                span Fire
+                button(type="button")
+                    //- img(src="/assets/img/campfire.svg", alt="campfire icon")
+                
+            div(data-value="coffee").track.track-coffee 
+                span Coffee
+                button(type="button")
+                    //- img(src="/assets/img/coffee.svg", alt="coffee icon")
+            
+            div(data-value="leaves").track.track-leaves
+                span Leaves
+                button(type="button")
+                    //- img(src="/assets/img/leaves.svg", alt="leaves icon")
+            
+            
+           
+
+    section.app__controls
+
+        div.controls__other
+            
+            button(type="button").prev prev
+                //- img(src="/assets/img/next.svg", alt="previous icon")
+                 
+            button(type="button").mute mute
+                //- img(src="/assets/img/muted.svg", alt="mute icon")
+            
+            button(type="button").next next
+                //- img(src="/assets/img/next.svg", alt="next icon")
+                
+                
+        div.controls__volume
+            
+            input(type="range", name="volume-slider", min="0", max="100", value="50").volume-slider

@@ -2,51 +2,42 @@
 $headings: 'Titillium Web', sans-serif
 $content: 'Source Sans Pro', sans-serif
 
-// Base Colors
-
-$lightgreen: lightgreen
-$peachpuff: peachpuff
-$papaya: papayawhip
-$medaquamarine: mediumaquamarine
-$lightgrey: lightgrey
-$whitesmoke: whitesmoke
-$lightsalmon: lightsalmon
-$cornsilk: cornsilk
-$moccasin: moccasin
-$medturquoise: mediumturquoise
-
 // Project Colors
 
-$primary: #FEED30
-$secondary: #FF6868
-$tertiary: #924992
-$quarternary: #504077
+$background: #FCD0A1
 
-$background: #5A0755
-
-$fire: #F4A59E
-$night: #C1498E
 $rain: #91377C
-$beach: #E36B98
-$leaves: #FCF4F6
-$coffee: #E5B6C7
+$night: #C1498E
+$creek: #E36B98
+$fire: #F4A59E
+$coffee: lighten($fire, 11%)
+$leaves: lighten($coffee, 4%)
 
 // Map for social colors
 
 $social: ( facebook: #3B539A, twitter: #00ACED, gplus: #F12F1C, linkedin: #007BB6, pinterest: #CB2027, youtube: #BB0000, instagram: #517FA4, github: #161414, vimeo: #1BB8EE, dribbble: #ea4c89, soundcloud: #FF6600 )
 
+$tracks: ( rain: $rain, night: $night, creek: $creek, fire: $fire, coffee: $coffee, leaves: $leaves )
+
 // Loop through the map and create style for each class
 @each $name, $value in $social
 
-   .icon--#{$name}
+    .icon--#{$name}
 
-      svg path
+        svg path
 
-         fill: $value
-         transition: all .3s ease-in
+            fill: $value
+            transition: all .3s ease-in
 
-      &:hover
+        &:hover
 
-         svg path
+        svg path
 
             fill: darken($value, 4%)
+
+
+@each $name, $value in $tracks
+
+    .track-#{$name}
+
+        background-color: $value

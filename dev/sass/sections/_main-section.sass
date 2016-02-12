@@ -1,18 +1,58 @@
-.main
-
+.app-container
+    background-color: $background
     height: 100vh
-    background-color: $fire
+    display: flex
+    align-items: center
+    justify-content: center
+
+main.app
+    width: 60em
+    height: 35em
+    display: flex
+    flex-direction: column
+    box-shadow: 1px 1px 5px darken($background, 70%)
+
+// top section
+
+.app__player
+
+    flex-grow: 1
+    background-color: $rain
+    display: flex
+
+    > div[class^="player__"]
+        width: 50%
+
+.player__cover
+
+    background-color: $leaves
+    display: flex
+    align-items: center
+    justify-content: center
+
+    img
+        +size(190px)
+
+.player__tracks
+    display: flex
+    flex-direction: column
+
+    > div
+        flex: 1
+
+.track
 
     display: flex
     align-items: center
     justify-content: center
 
-.main__section
-    color: $water
+    span
+        font-size: 1.4em
+        font-weight: 600
 
-.main__strapline
-    text-align: center
-    margin-top: 35px
-    color: $night
-    font-size: 23px
-    font-weight: 600
+// bottom section
+
+.app__controls
+
+    background-color: $creek
+    height: 15%
