@@ -19,6 +19,8 @@ $social: ( facebook: #3B539A, twitter: #00ACED, gplus: #F12F1C, linkedin: #007BB
 
 $tracks: ( rain: $rain, night: $night, creek: $creek, fire: $fire, coffee: $coffee, leaves: $leaves )
 
+$track-titles: (leaves: $leaves, coffee: $coffee,fire: lighten($fire, 12%), creek: darken($creek, 6%), night: $night, rain: $rain)
+
 // Loop through the map and create style for each class
 @each $name, $value in $social
 
@@ -41,3 +43,9 @@ $tracks: ( rain: $rain, night: $night, creek: $creek, fire: $fire, coffee: $coff
     .track-#{$name}
 
         background-color: $value
+
+@each $name, $value in $track-titles
+
+    span[data-color="#{$name}"]
+
+        color: $value
