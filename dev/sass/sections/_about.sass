@@ -1,0 +1,32 @@
+.about
+    +position(absolute, 0 0 0 0)
+    z-index: 999
+    background-color: $rain
+    display: flex
+    align-items: center
+    justify-content: center
+    transform: translateX(-100%)
+    transition: all .23s ease
+
+.about__content
+    color: $leaves
+    text-align: center
+
+    p
+        font-size: 1.3em
+        font-weight: 600
+        margin-bottom: .3em
+
+.toggle-about
+
+    position: fixed
+    z-index: 9990
+    top: 3em
+    right: 3em
+
+    svg
+        +size(50px)
+
+        path
+            fill: $rain
+            transition: all .23s ease

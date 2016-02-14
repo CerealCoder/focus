@@ -1,3 +1,5 @@
-import {test} from './lib/module';
+import {toggleAboutBtn} from './lib/module'
 
-test.log()
+toggleAboutBtn.addEventListener('click', function() {
+    document.body.classList.toggle('show-about')
+})

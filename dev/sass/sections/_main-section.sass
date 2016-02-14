@@ -1,11 +1,31 @@
+body
+    overflow: hidden
+
+    &.show-about
+
+        .app-container
+
+            transform: translateX(100%)
+
+        .about
+
+            transform: translateX(0)
+
+        .toggle-about svg path
+            fill: $leaves
+
 .app-container
+    overflow: hidden
     background-color: $background
     height: 100vh
     display: flex
     align-items: center
     justify-content: center
+    transition: all .23s ease
+
 
 main.app
+    overflow: hidden
     width: 60em
     height: 35em
     display: flex
