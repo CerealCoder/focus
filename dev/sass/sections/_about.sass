@@ -6,7 +6,7 @@
     align-items: center
     justify-content: center
     transform: translateX(-100%)
-    transition: all .23s ease
+    transition: all .23s ease-out
 
 .about__content
     color: $leaves
@@ -16,6 +16,22 @@
         font-size: 1.3em
         font-weight: 600
         margin-bottom: .3em
+
+    a
+        position: absolute
+        bottom: 2.5em
+        left: 50%
+        transform: translateX(-50%)
+
+        &:hover svg
+
+            animation: wobble .65s linear both 
+
+        svg
+            +size(70px)
+
+            path
+                fill: $leaves
 
 .toggle-about
 
